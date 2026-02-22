@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>feedback</title>
+</head>
+
+<body>
+    <header>
+
+        <!-- overlay  -->
+
+        <div id="overlay"
+            class="fixed inset-0 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-30 sm:hidden">
+        </div>
+
+        <!-- navbar  -->
+        <nav class="fixed top-0 left-0 w-full bg-dark z-50 px-8 sm:px-4 xl:px-0">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <!-- logo  -->
+                <div class="text-logocolor text-[1.4rem] sm:text-[1.7rem] md:text-[2rem] xl:text-[2.4rem]">
+                    myPortfolio
+                </div>
+                <!-- destop menu  -->
+                <ul class="hidden sm:flex text-[1.7rem] sm:gap-8 md:gap-12 xl:gap-20 xl:text-[2rem]">
+                    <li
+                        class="relative before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-0 before:bg-logocolor before:transition-all hover:before:w-full">
+                        <a href="index.html" class="navbar-link">Home</a>
+                    </li>
+                    <li
+                        class="relative before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-0 before:bg-logocolor before:transition-all hover:before:w-full">
+                        <a href="project.html" class="navbar-link">Projects</a>
+                    </li>
+                    <li
+                        class="relative before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-0 before:bg-logocolor before:transition-all hover:before:w-full">
+                        <a href="contact.html" class="navbar-link">Contact</a>
+                    </li>
+
+                </ul>
+                <!-- hamburger / close  -->
+                <button id="menuBtn" class="sm:hidden text-[2rem] relative w-8 h-8 cursor-pointer">
+                    <i id="openIcon" class="fa-solid fa-bars absolute inset-0 transition-opacity"></i>
+                    <i id="closeIcon" class="fa-solid fa-xmark absolute inset-0 opacity-0 transition-opacity"></i>
+                </button>
+            </div>
+
+        </nav>
+        <!-- mobile menu  -->
+        <div id="mobileMenu"
+            class="fixed top-0 right-0 h-full w-64 bg-dark translate-x-full transition-all duration-500 ease-linear z-40 sm:hidden">
+            <div class="flex flex-col gap-6 pl-4 pt-4 text-[1.7rem] mt-20">
+                <a href="index.html" class="hover:text-logocolor">Home</a>
+                <a href="project.html" class="hover:text-logocolor">Projects</a>
+                <a href="contact.html" class="hover:text-logocolor">Contact</a>
+                <hr class="border-[#2f2f5a] my-4">
+                <!-- social icons  -->
+                <div class="flex gap-5 text-2xl">
+                    <a href="https://github.com/bikash2911" class="hover:opacity-60 transition">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bikash-rai-406ba7361/" class="hover:opacity-60 transition">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/CodeWithoutDegree" class="hover:opacity-60 transition">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <section class="w-full px-4 mt-16 pt-8 md:pt-24">
+            <div class="py-4 sm:w-[90%] md:w-[80%] xl:w-[50%]">
+                <h1
+                    class="mb-8 text-center text-[1.4rem] font-bold mt-3 px-4 sm:text-[1.7rem] sm:mt-4 sm:mb-14 lg:mt-7 lg:mb-16 lg:text-[2rem] xl:text-[2.4rem]">
+                    Leave Your Feedback
+                </h1>
+                <p class="px-4 text-[1.1rem] font-light sm:text-[1.4rem] lg:text-[1.6rem] xl:text-[1.8rem]">We'd love to
+                    hear your thoughts!</p>
+                <div class="bg-dark">
+                    <form class="w-full flex flex-col gap-10 mt-5 px-4 ">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex flex-col">
+                                <label class="input-label">Full Name :</label>
+                                <input type="text" name="fullname" id="username" autocomplete="off"
+                                    placeholder="Enter your name"
+                                    oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" class="input-base"
+                                    required>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="input-label">Company / Organization name (optional) :</label>
+                                <input type="text" name="company" id="company" autocomplete="off"
+                                    placeholder="Company / Organization name" class="input-base">
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="input-label">Your position / Role :</label>
+                                <input type="text" name="position" id="position"
+                                    placeholder="Enter your position / role..." class="input-base">
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="input-label">Message</label>
+                                <textarea rows="5" placeholder="Write your message..." required
+                                    class="input-base"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="">
+                            <button type="submit" class="btn-primary">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script src="../dist/js/main.js"></script>
+    <script src="../dist/js/nav-active.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>bikashrai</title>
+
+</head>
+
+<body id="body">
+    <header>
+
+        <!-- overlay  -->
+
+        <div id="overlay"
+            class="fixed inset-0 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-30 sm:hidden">
+        </div>
+
+        <!-- navbar  -->
+        <nav class="fixed top-0 left-0 w-full bg-dark z-50 px-8 sm:px-4 xl:px-0">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <!-- logo  -->
+                <div class="text-logocolor text-[1.4rem] sm:text-[1.7rem] md:text-[2rem] xl:text-[2.4rem]">
+                    myPortfolio
+                </div>
+                <!-- destop menu  -->
+                <ul class="hidden sm:flex text-[1.7rem] sm:gap-8 md:gap-12 xl:gap-20 xl:text-[2rem]">
+                    <li
+                        class="relative before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-0 before:bg-logocolor before:transition-all hover:before:w-full">
+                        <a href="index.html" class="navbar-link">Home</a>
+                    </li>
+                    <li
+                        class="relative before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-0 before:bg-logocolor before:transition-all hover:before:w-full">
+                        <a href="project.html" class="navbar-link">Projects</a>
+                    </li>
+                    <li
+                        class="relative before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-0 before:bg-logocolor before:transition-all hover:before:w-full">
+                        <a href="contact.html" class="navbar-link">Contact</a>
+                    </li>
+
+                </ul>
+                <!-- hamburger / close  -->
+                <button id="menuBtn" class="sm:hidden text-[2rem] relative w-8 h-8 cursor-pointer">
+                    <i id="openIcon" class="fa-solid fa-bars absolute inset-0 transition-opacity"></i>
+                    <i id="closeIcon" class="fa-solid fa-xmark absolute inset-0 opacity-0 transition-opacity"></i>
+                </button>
+            </div>
+
+        </nav>
+        <!-- mobile menu  -->
+        <div id="mobileMenu"
+            class="fixed top-0 right-0 h-full w-64 bg-dark translate-x-full transition-all duration-500 ease-linear z-40 sm:hidden">
+            <div class="flex flex-col gap-6 pl-4 pt-4 text-[1.7rem] mt-20">
+                <a href="index.html" class="navbar-link hover:text-logocolor">Home</a>
+                <a href="project.html" class="navbar-link hover:text-logocolor">Projects</a>
+                <a href="contact.html" class="navbar-link hover:text-logocolor">Contact</a>
+                <hr class="border-[#2f2f5a] my-4">
+                <!-- social icons  -->
+                <div class="flex gap-5 text-2xl">
+                    <a href="https://github.com/bikash2911" class="hover:opacity-60 transition">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bikash-rai-406ba7361/" class="hover:opacity-60 transition">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/CodeWithoutDegree" class="hover:opacity-60 transition">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main hero section  -->
+    <section id="home" class="w-full px-4 mt-16 flex justify-center items-center pt-24 md:pt-48 xl:pt-56">
+        <div
+            class=" w-screen  flex flex-wrap justify-center items-center gap-8 sm:grid grid-cols-[2fr_1fr] md:px-32 xl:px-50">
+            <div class="w-full flex flex-col items-center sm:items-start">
+                <h1 class="text-[2.4rem] font-bold sm:text-[3.2rem] md:text-[3.6rem] xl:text-[4.2rem]">Hi, I'm <span
+                        class="text-purple">Bikash
+                        Rai</span>-</h1>
+                <p class="text-[2rem] font-semibold sm:text-[2.8rem] md:text-[3.2rem] xl:text-[3.8rem]">A Passionate
+                    and Creative</p>
+                <p class="text-[1.8rem] font-semibold text-purple sm:text-[2.6rem] md:text-[3rem] xl:text-[3.6rem]">
+                    <span id="element"></span>
+                </p>
+
+            </div>
+            <div class="shadow-box flex justify-center">
+                <img src="../dist/assets/images/myimg.webp" alt="image"
+                    class="block w-[20rem] h-auto object-contain cursor-pointer" onclick="openImage(this.src)">
+            </div>
+        </div>
+        <!-- Fullscreen Modal (one time only) -->
+        <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50">
+            <!-- Close button -->
+            <button class="absolute top-6 right-6 text-white text-3xl cursor-pointer" onclick="closeImage()">
+                ✕
+            </button>
+            <!-- Full image -->
+            <img id="modalImg" class="max-w-[90%] max-h-[90%] object-contain" alt="" />
+        </div>
+    </section>
+    <!-- about section  -->
+    <article class="w-full px-4 mt-24 md:mt-48 xl:mt-56">
+        <div class="bg-dark py-4 sm:w-[90%] md:w-[80%] xl:w-[50%]">
+            <h1 class="text-[1.4] font-semibold sm:text-[2rem] xl:text-[2.4rem]">aboutMe</h1>
+            <div class="mt-4 px-4">
+                <p class="text-[1.1rem] font-light sm:text-[1.4rem] md:text-[1.6rem] xl:text-[2rem]">I'm a
+                    passionate Frontend Developer dedicated to creating
+                    responsive, user-friendly, and visually
+                    appealing websites. With expertise in HTML, CSS, JavaScript, and React, I focus on building
+                    seamless digital experiences. Always eager to learn and innovate, I strive to turn ideas into
+                    reality through clean and efficient code.
+
+                </p>
+                <div class="mt-12">
+                    <button><a href="../dist/pdf/myResume.pdf" target="_blank" class="btn-resume">Resume</a></button>
+                </div>
+            </div>
+
+        </div>
+    </article>
+    <!-- work experience  -->
+    <section class="w-full px-4 mt-12 sm:mt-24 xl:mt-28">
+        <div class="">
+            <p class="text-[0.8rem] font-extralight sm:text-[1rem] xl:text-[1.4rem]">What i have done so far</p>
+            <h2 class="text-[1.4] font-semibold sm:text-[2rem] xl:text-[2.4rem]">Work Experience</h2>
+            <div
+                class="grid grid-cols-1 gap-[0.8rem] px-4 mt-4 sm:grid-cols-2 sm:gap-10 sm:mt-6 xl:grid-cols-3 xl:gap-12 xl:mt-10">
+                <div class="card">
+                    <h3 class="card-title">
+                        HTML / CSS
+                    </h3>
+                    <p class="card-text">
+                        Designed <strong>20+ responsive web pages</strong> using Semantic HTML5 and CSS3, improving
+                        Lighthouse
+                        performance scores by <strong>95% for mobile users.</strong> Optimized tablet/mobile views
+                        with media queries
+                        and Flexbox. </p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">
+                        JavaScript </h3>
+                    <p class="card-text">
+                        Developed a real-time cart update system for an e-commerce platform using <strong>Vanilla
+                            JS, </strong>
+                        reducing checkout abandonment by <strong>30%.</strong> Cached user preferences via
+                        LocalStorage, cutting
+                        server requests by <strong>40%.</strong></p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">
+                        React </h3>
+                    <p class="card-text">
+                        Built a user dashboard with <strong>React.js and Redux Toolkit, </strong>
+                        featuring <strong>15+ reusable
+                            components. </strong>Optimized API calls using Axios interceptors and caching, reducing
+                        load time
+                        by <strong>50%.</strong></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- work together  -->
+    <section class="w-full px-4 mt-12 sm:mt-24 xl:mt-28">
+        <div class="bg-dark py-4 sm:w-[90%] md:w-[80%] xl:w-[50%]">
+            <h2 class="text-[1.4rem] font-bold sm:text-[2rem] xl:text-[2.4rem]">Let’s work Together</h2>
+            <p class="text-[1.1rem] font-light mt-7 px-4 sm:text-[1.7rem]  xl:text-[1.8rem]">
+                Have a project in mind or looking to collaborate? I'm always open to discussing web development
+                opportunities, freelance work, or creative ideas.
+            </p>
+            <form class="w-full flex flex-col gap-10 mt-5 px-4" id="contactForm"
+                action="https://formspree.io/f/xanwkakp" method="post">
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col">
+                        <label class="input-label">Email</label>
+                        <input type="email" name="email" placeholder="Enter your email" class="input-base" required>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label class="input-label">Message</label>
+                        <textarea rows="5" name="message" placeholder="Write your message..."
+                            class="input-base"></textarea>
+                    </div>
+                </div>
+
+                <div class="">
+                    <button type="submit" class="btn-primary">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+    <!-- testmonials  -->
+    <section class="w-full px-4 mt-12 sm:mt-24 xl:mt-28">
+        <div class="">
+            <div class="flex flex-col items-center">
+                <h1 class="text-[1.4rem] font-medium sm:text-[2rem] xl:text-[2.4rem]">What Clients Say</h1>
+                <p class="text-[1.1rem] font-medium px-8 text-center sm:text-[1.6rem] xl:text-[1.8rem]">Here are some
+                    kind words
+                    from
+                    the people I’ve worked with.</p>
+            </div>
+            <div class="grid grid-cols-1 gap-2.5 items-center mt-2 px-4 sm:grid-cols-2 sm:mt-3 md:mt-4 xl:mt-6">
+                <div class=" text-center bg-white text-black px-14 py-5 sm:h-[13.6rem]">
+                    <p class="text-[1.1rem] font-light sm:text-[1.4rem] xl:text-[1.7rem]">
+                        "Great work! Delivered everything on time and exceeded
+                        expectations. Would
+                        highly recommend."
+                    </p>
+                    <p class="text-[0.8] font-bold mt-6 sm:text-[1.2rem] xl:text-[1.4rem]">John Doe</p>
+                    <p class="text-[0.8] font-light sm:text-[1rem] xl:text-[1.2rem]">Individual</p>
+                </div>
+                <div class=" text-center bg-white text-black px-14 py-5 sm:h-[13.6rem]">
+                    <p class="text-[1.1rem] font-light sm:text-[1.4rem] xl:text-[1.7rem]">
+                        "I'm really happy with the website design. Will surely work again in future projects."
+                    </p>
+                    <p class="text-[0.8] font-bold mt-6 sm:text-[1.2rem] xl:text-[1.4rem]">Ali Khan</p>
+                    <p class="text-[0.8] font-light sm:text-[1rem] xl:text-[1.2rem]">Freelancer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- feedback link here -->
+    <section class="w-full px-4 mt-4 sm:mt-6 xl:mt-8">
+        <div class="">
+            <a class="text-[1.1rem] font-bold hover:opacity-80 transition sm:text-[1.4rem] xl:text-[2rem]"
+                href="feedback.html"><i
+                    class="fa-regular fa-comment-dots text-[1.1rem] sm:text-[1.4rem] xl:text-[2rem]"></i> Give
+                Us
+                Feedback</a>
+        </div>
+    </section>
+
+    <!-- footer section  -->
+    <footer class="w-full mt-10 sm:mt-22 xl:mt-26">
+        <div class="bg-dark pt-10 pb-4 flex flex-col items-center gap-10 sm:gap-14 md:gap-16 xl:gap-20">
+            <div class="flex gap-6">
+                <div>
+                    <h1 class="text-[1rem] font-bold sm:text-[1.4rem] xl:text-[2rem]">Follow on :</h1>
+                </div>
+
+
+                <div class="flex gap-4 text-xl sm:text-2xl md:text-3xl xl:text-4xl">
+                    <a href="https://www.facebook.com/CodeWithoutDegree" target="_blank"
+                        class="hover:opacity-60 transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com/bikash2911" target="_blank" class="hover:opacity-60 transition"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/bikash-rai-406ba7361/" target="_blank"
+                        class="hover:opacity-60 transition"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <p class="text-[0.8rem] font-light sm:text-[1rem] xl:text-[1.4rem]">
+                    © <span id="year"></span> Bikash Rai @ All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../dist/js/main.js"></script>
+    <script src="../dist/js/fullscreenmodel.js"></script>
+    <!-- blink text  -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        let typed = new Typed("#element", {
+            strings: ["Web Developer 💻"],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true,
+        });
+    </script>
+
+    <!-- after form submit clear all text and input  -->
+    <script>
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", () => {
+            setTimeout(() => {
+                form.reset();
+            }, 500);
+        });
+    </script>
+    <!-- footer ko lagi automatically year update ko lagi  -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="../dist/js/nav-active.js"></script>
+</body>
+
+</html>

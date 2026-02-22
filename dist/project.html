@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>projects</title>
+
+</head>
+
+<body id="body">
+    <header>
+
+        <!-- overlay  -->
+
+        <div id="overlay"
+            class="fixed inset-0 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-30 sm:hidden">
+        </div>
+
+        <!-- navbar  -->
+        <nav class="fixed top-0 left-0 w-full bg-dark z-50 px-8 sm:px-4 xl:px-0">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <!-- logo  -->
+                <div class="text-logocolor text-[1.4rem] sm:text-[1.7rem] md:text-[2rem] xl:text-[2.4rem]">
+                    myPortfolio
+                </div>
+                <!-- destop menu  -->
+                <ul class="hidden sm:flex text-[1.7rem] sm:gap-8 md:gap-12 xl:gap-20 xl:text-[2rem]">
+                    <li
+                        class="relative before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-0 before:bg-logocolor before:transition-all hover:before:w-full">
+                        <a href="index.html" class="navbar-link">Home</a>
+                    </li>
+                    <li
+                        class="relative before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-0 before:bg-logocolor before:transition-all hover:before:w-full">
+                        <a href="project.html" class="navbar-link">Projects</a>
+                    </li>
+                    <li
+                        class="relative before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-0 before:bg-logocolor before:transition-all hover:before:w-full">
+                        <a href="contact.html" class="navbar-link">Contact</a>
+                    </li>
+
+                </ul>
+                <!-- hamburger / close  -->
+                <button id="menuBtn" class="sm:hidden text-[2rem] relative w-8 h-8 cursor-pointer">
+                    <i id="openIcon" class="fa-solid fa-bars absolute inset-0 transition-opacity"></i>
+                    <i id="closeIcon" class="fa-solid fa-xmark absolute inset-0 opacity-0 transition-opacity"></i>
+                </button>
+            </div>
+
+        </nav>
+        <!-- mobile menu  -->
+        <div id="mobileMenu"
+            class="fixed top-0 right-0 h-full w-64 bg-dark translate-x-full transition-all duration-500 ease-linear z-40 sm:hidden">
+            <div class="flex flex-col gap-6 pl-4 pt-4 text-[1.7rem] mt-20">
+                <a href="index.html" class="navbar-link hover:text-logocolor">Home</a>
+                <a href="project.html" class="navbar-link hover:text-logocolor">Projects</a>
+                <a href="contact.html" class="navbar-link hover:text-logocolor">Contact</a>
+                <hr class="border-[#2f2f5a] my-4">
+                <!-- social icons  -->
+                <div class="flex gap-5 text-2xl">
+                    <a href="https://github.com/bikash2911" class="hover:opacity-60 transition">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bikash-rai-406ba7361/" class="hover:opacity-60 transition">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/CodeWithoutDegree" class="hover:opacity-60 transition">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="w-full px-4 mt-16 pt-8 md:pt-24">
+        <div class="flex flex-col items-center">
+            <h1 class="text-[1.4rem] font-bold md:text-[2rem] xl:text-[2.4rem]">User Management Form with Validation
+            </h1>
+            <p class="text-[1rem] font-normal md:text-[1.7rem] xl:text-[2rem]">Add users, validate emails and phone
+                numbers, and manage data
+                interactively.</p>
+        </div>
+        <div class="flex flex-col gap-8 mt-12 md:mt-16 xl:mt-20">
+            <div>
+                <h3 class="text-[1.2rem] font-bold text-blue md:text-[1.7rem] xl:text-[2rem]">Key Features:</h3>
+                <ul class="list-disc px-8 text-[1rem] font-light md:text-[1.4rem] xl:text-[1.6rem]">
+                    <li>Email must be unique; duplicate emails are blocked.</li>
+                    <li>Phone number must be exactly 10 digits; errors show in popup.</li>
+                    <li>Delete confirmation popup prevents accidental deletions.</li>
+                    <li>Responsive layout for mobile, tablet, and desktop.</li>
+                    <li>Interactive table displays all user data dynamically.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-[1.2rem] font-bold text-blue md:text-[1.7rem] xl:text-[2rem]">Technical Highlights:</h3>
+                <ul class="list-disc px-8 text-[1rem] font-light md:text-[1.4rem] xl:text-[1.6rem]">
+                    <li>Built with HTML, CSS, and JavaScript.</li>
+                    <li>Uses DOM manipulation, event delegation, and form validation.</li>
+                    <li>Popup messages implemented for errors and confirmations.</li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="mt-8 flex flex-col gap-8">
+            <div>
+                <h3 class="text-[1.2rem] font-bold text-blue md:text-[1.7rem] xl:text-[2rem]">How to try :</h3>
+                <p class="text-[1rem] px-4 font-medium md:text-[1.4rem] xl:text-[1.6rem]">
+                    Enter name, email, and phone number in the form above. Duplicate emails or invalid phone numbers
+                    trigger popups. Use the delete button to remove entries safely.
+                </p>
+            </div>
+            <!-- <button
+                class="bg-yellow text-black font-bold text-[1.1rem] p-2 rounded-md hover:bg-[#ffaa00] cursor-pointer sm:text-[1.7rem] md:text-[2rem] xl:text-[2.4rem]">
+                <a href="">
+                    Live Demo
+                </a>
+            </button> -->
+            <div class="mt-6 max-w-4xl pl-4">
+                <a href="https://formwithbikash.netlify.app/" target="_blank" rel="noopener"
+                    class="inline-block rounded-md bg-yellow-500 px-6 py-2.5 text-md font-semibold text-gray-900 transition hover:-translate-y-0.5 hover:bg-yellow-400 sm:text-lg md:text-xl xl:text-2xl">
+                    Live Demo
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="w-full px-4 mt-12 sm:mt-24 xl:mt-28">
+        <div class="w-full flex gap-2 px-4">
+            <div class="flex flex-1 items-center flex-col gap-1 md:gap-4 shadow-[-1px_1px_10px_rgba(0,0,0,0.5)]">
+                <h3 class="text-[1.2rem] font-semibold">Destop view</h3>
+                <div class="h-75 overflow-hidden cursor-pointer">
+                    <img src="../dist/assets/images/destop.webp" class="block w-full h-full object-contain" alt="destop"
+                        onclick="openImage(this.src)">
+                </div>
+            </div>
+            <div class="flex flex-1 items-center flex-col gap-1 md:gap-4 shadow-[-1px_1px_10px_rgba(0,0,0,0.5)]">
+                <h3 class="text-[1.2rem] font-semibold">Tablet view</h3>
+                <div class="h-75 overflow-hidden cursor-pointer">
+                    <img src="../dist/assets/images/tab.webp" class="block w-full h-full object-contain" alt="tab"
+                        onclick="openImage(this.src)">
+                </div>
+            </div>
+            <div class="flex flex-1 items-center flex-col gap-1 md:gap-4 shadow-[-1px_1px_10px_rgba(0,0,0,0.5)]">
+                <h3 class="text-[1.2rem] font-semibold">Mobile view</h3>
+                <div class="h-75 overflow-hidden cursor-pointer">
+                    <img src="../dist/assets/images/mobile.webp" class="block w-full h-full object-contain" alt="mobile"
+                        onclick="openImage(this.src)">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Fullscreen Modal (one time only) -->
+        <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50">
+            <!-- Close button -->
+            <button class="absolute top-6 right-6 text-white text-3xl cursor-pointer" onclick="closeImage()">
+                ✕
+            </button>
+            <!-- Full image -->
+            <img id="modalImg" class="max-w-[90%] max-h-[90%] object-contain" alt="" />
+        </div>
+
+    </section>
+    <!-- footer section  -->
+    <footer class="w-full mt-10 sm:mt-22 xl:mt-26">
+        <div class="bg-dark pt-10 pb-4 flex flex-col items-center gap-10 sm:gap-14 md:gap-16 xl:gap-20">
+            <div class="flex gap-6">
+                <div>
+                    <h1 class="text-[1rem] font-bold sm:text-[1.4rem] xl:text-[2rem]">Follow on :</h1>
+                </div>
+
+
+                <div class="flex gap-4 text-xl sm:text-2xl md:text-3xl xl:text-4xl">
+                    <a href="https://www.facebook.com/CodeWithoutDegree" target="_blank"
+                        class="hover:opacity-60 transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com/bikash2911" target="_blank" class="hover:opacity-60 transition"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/bikash-rai-406ba7361/" target="_blank"
+                        class="hover:opacity-60 transition"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <p class="text-[0.8rem] font-light sm:text-[1rem] xl:text-[1.4rem]">
+                    © <span id="year"></span> Bikash Rai @ All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../dist/js/main.js"></script>
+    <script src="../dist/js/fullscreenmodel.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="../dist/js/nav-active.js"></script>
+</body>
+
+</html>

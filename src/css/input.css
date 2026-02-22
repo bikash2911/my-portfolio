@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-jost: "Jost", sans-serif;
+  --color-logocolor: #ff9800;
+  --color-dark: #191834;
+  --color-purple: #a755f7;
+  --color-blue: #0277ff;
+  --color-yellow: #ffcc00;
+  --shadow-box: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+html {
+  background-color: #20203a;
+  font-size: 62.5%;
+  font-family: var(--font-jost);
+  color: white;
+}
+
+@layer components {
+  .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .card-title {
+    @apply text-[1.1rem] font-semibold underline sm:text-[1.4rem] xl:text-[1.8rem];
+  }
+
+  .card-text {
+    @apply text-[0.8rem] font-extralight sm:text-[1.4rem] xl:text-[1.6rem];
+  }
+
+  .btn-resume {
+    @apply bg-[#2a2950] text-white p-2 rounded-md text-sm transition-colors duration-300 hover:bg-[#3a3366] cursor-pointer md:text-lg md:px-2.5 xl:text-2xl xl:px-3;
+  }
+  .active {
+    @apply font-semibold border-b-2 border-logocolor;
+  }
+}
+
+@utility input-base {
+  @apply border bg-[#20203a] rounded-md p-2 text-sm outline-none focus:border-blue-500 sm:text-lg xl:text-xl;
+}
+
+@utility input-label {
+  @apply text-[1.1rem] font-light sm:text-[1.4rem] xl:text-[1.6rem];
+}
+
+@utility btn-primary {
+  @apply bg-blue-600 w-auto text-white p-2 rounded-md text-sm hover:bg-blue-700 cursor-pointer md:text-lg md:px-2.5 xl:text-2xl xl:px-3;
+}
