@@ -28,11 +28,11 @@ html {
   }
 
   .card-title {
-    @apply text-[1.1rem] font-semibold underline sm:text-[1.4rem] xl:text-[1.8rem];
+    @apply text-[1.2rem] font-semibold underline sm:text-[1.4rem] xl:text-[1.8rem];
   }
 
   .card-text {
-    @apply text-[0.8rem] font-extralight sm:text-[1.4rem] xl:text-[1.6rem];
+    @apply text-[1rem] font-extralight sm:text-[1.4rem] xl:text-[1.6rem];
   }
 
   .btn-resume {

@@ -108,9 +108,9 @@
     <!-- about section  -->
     <article class="w-full px-4 mt-24 md:mt-48 xl:mt-56">
         <div class="bg-dark py-4 sm:w-[90%] md:w-[80%] xl:w-[50%]">
-            <h1 class="text-[1.4] font-semibold sm:text-[2rem] xl:text-[2.4rem]">aboutMe</h1>
+            <h1 class="text-xl sm:text-2xl md:text-3xl font-semibold">aboutMe</h1>
             <div class="mt-4 px-4">
-                <p class="text-[1.1rem] font-light sm:text-[1.4rem] md:text-[1.6rem] xl:text-[2rem]">I'm a
+                <p class="text-[1.2rem] font-light sm:text-[1.4rem] md:text-[1.6rem] xl:text-[2rem]">I'm a
                     passionate Frontend Developer dedicated to creating
                     responsive, user-friendly, and visually
                     appealing websites. With expertise in HTML, CSS, JavaScript, and React, I focus on building
@@ -129,7 +129,7 @@
     <section class="w-full px-4 mt-12 sm:mt-24 xl:mt-28">
         <div class="">
             <p class="text-[0.8rem] font-extralight sm:text-[1rem] xl:text-[1.4rem]">What i have done so far</p>
-            <h2 class="text-[1.4] font-semibold sm:text-[2rem] xl:text-[2.4rem]">Work Experience</h2>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold">Work Experience</h2>
             <div
                 class="grid grid-cols-1 gap-[0.8rem] px-4 mt-4 sm:grid-cols-2 sm:gap-10 sm:mt-6 xl:grid-cols-3 xl:gap-12 xl:mt-10">
                 <div class="card">
@@ -170,8 +170,8 @@
     <!-- work together  -->
     <section class="w-full px-4 mt-12 sm:mt-24 xl:mt-28">
         <div class="bg-dark py-4 sm:w-[90%] md:w-[80%] xl:w-[50%]">
-            <h2 class="text-[1.4rem] font-bold sm:text-[2rem] xl:text-[2.4rem]">Let’s work Together</h2>
-            <p class="text-[1.1rem] font-light mt-7 px-4 sm:text-[1.7rem]  xl:text-[1.8rem]">
+            <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold">Let’s work Together</h3>
+            <p class="text-[1.2rem] font-light mt-7 px-4 sm:text-[1.7rem]  xl:text-[1.8rem]">
                 Have a project in mind or looking to collaborate? I'm always open to discussing web development
                 opportunities, freelance work, or creative ideas.
             </p>
@@ -203,7 +203,7 @@
     <section class="w-full px-4 mt-12 sm:mt-24 xl:mt-28">
         <div class="">
             <div class="flex flex-col items-center">
-                <h1 class="text-[1.4rem] font-medium sm:text-[2rem] xl:text-[2.4rem]">What Clients Say</h1>
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold">What Clients Say</h3>
                 <p class="text-[1.1rem] font-medium px-8 text-center sm:text-[1.6rem] xl:text-[1.8rem]">Here are some
                     kind words
                     from
@@ -211,7 +211,7 @@
             </div>
             <div class="grid grid-cols-1 gap-2.5 items-center mt-2 px-4 sm:grid-cols-2 sm:mt-3 md:mt-4 xl:mt-6">
                 <div class=" text-center bg-white text-black px-14 py-5 sm:h-[13.6rem]">
-                    <p class="text-[1.1rem] font-light sm:text-[1.4rem] xl:text-[1.7rem]">
+                    <p class="text-[1rem] font-extralight sm:text-[1.4rem] xl:text-[1.7rem]">
                         "Great work! Delivered everything on time and exceeded
                         expectations. Would
                         highly recommend."
@@ -220,7 +220,7 @@
                     <p class="text-[0.8] font-light sm:text-[1rem] xl:text-[1.2rem]">Individual</p>
                 </div>
                 <div class=" text-center bg-white text-black px-14 py-5 sm:h-[13.6rem]">
-                    <p class="text-[1.1rem] font-light sm:text-[1.4rem] xl:text-[1.7rem]">
+                    <p class="text-[1rem] font-extralight sm:text-[1.4rem] xl:text-[1.7rem]">
                         "I'm really happy with the website design. Will surely work again in future projects."
                     </p>
                     <p class="text-[0.8] font-bold mt-6 sm:text-[1.2rem] xl:text-[1.4rem]">Ali Khan</p>
@@ -294,7 +294,23 @@
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="js/nav-active.js"></script>
+    <!-- <script src="js/nav-active.js"></script> -->
+    <script>
+        const links = document.querySelectorAll(".navbar-link");
+
+        // Remove trailing slash, get last part of path
+        let currentPage =
+            location.pathname.replace(/\/$/, "").split("/").pop() || "index.html";
+
+        links.forEach((link) => {
+            const linkPage = link.getAttribute("href");
+
+            // Check match
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    </script>
 </body>
 
 </html>
