@@ -19,6 +19,11 @@ html {
   color: white;
 }
 
+.active {
+  font-weight: 600;
+  border-bottom: 2px solid #ff9800;
+}
+
 @layer components {
   .card {
     width: 100%;
@@ -28,18 +33,15 @@ html {
   }
 
   .card-title {
-    @apply text-[1.2rem] font-semibold underline sm:text-[1.4rem] xl:text-[1.8rem];
+    @apply text-[1.2rem] font-semibold underline underline-offset-2 sm:text-[1.4rem] md:text-[1.6rem] xl:text-[1.8rem];
   }
 
   .card-text {
-    @apply text-[1rem] font-extralight sm:text-[1.4rem] xl:text-[1.6rem];
+    @apply text-[1.2rem] font-extralight sm:text-[1.4rem] md:text-[1.6rem] xl:text-[1.8rem];
   }
 
   .btn-resume {
     @apply bg-[#2a2950] text-white p-2 rounded-md text-sm transition-colors duration-300 hover:bg-[#3a3366] cursor-pointer md:text-lg md:px-2.5 xl:text-2xl xl:px-3;
-  }
-  .active {
-    @apply font-semibold border-b-2 border-logocolor;
   }
 }
 
@@ -48,7 +50,7 @@ html {
 }
 
 @utility input-label {
-  @apply text-[1.1rem] font-light sm:text-[1.4rem] xl:text-[1.6rem];
+  @apply text-[1.2rem] font-light sm:text-[1.4rem] xl:text-[1.6rem];
 }
 
 @utility btn-primary {

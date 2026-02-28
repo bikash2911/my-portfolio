@@ -21,8 +21,6 @@
     --container-7xl: 80rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
-    --text-base: 1rem;
-    --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
@@ -39,7 +37,6 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    --leading-relaxed: 1.625;
     --radius-md: 0.375rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --blur-sm: 8px;
@@ -558,7 +555,7 @@
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .input-label {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     --tw-font-weight: var(--font-weight-light);
     font-weight: var(--font-weight-light);
     @media (width >= 40rem) {
@@ -580,6 +577,9 @@
   .text-\[1\.4rem\] {
     font-size: 1.4rem;
   }
+  .text-\[1\.6rem\] {
+    font-size: 1.6rem;
+  }
   .text-\[1\.7rem\] {
     font-size: 1.7rem;
   }
@@ -589,15 +589,8 @@
   .text-\[1rem\] {
     font-size: 1rem;
   }
-  .text-\[2\.4rem\] {
-    font-size: 2.4rem;
-  }
   .text-\[2rem\] {
     font-size: 2rem;
-  }
-  .leading-relaxed {
-    --tw-leading: var(--leading-relaxed);
-    line-height: var(--leading-relaxed);
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -626,9 +619,6 @@
   .text-\[0\.8\] {
     color: 0.8;
   }
-  .text-\[1\.4\] {
-    color: 1.4;
-  }
   .text-black {
     color: var(--color-black);
   }
@@ -646,6 +636,12 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .underline-offset-4 {
+    text-underline-offset: 4px;
   }
   .opacity-0 {
     opacity: 0%;
@@ -878,16 +874,15 @@
       padding-inline: calc(var(--spacing) * 4);
     }
   }
+  .sm\:pt-6 {
+    @media (width >= 40rem) {
+      padding-top: calc(var(--spacing) * 6);
+    }
+  }
   .sm\:text-2xl {
     @media (width >= 40rem) {
       font-size: var(--text-2xl);
       line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-  }
-  .sm\:text-base {
-    @media (width >= 40rem) {
-      font-size: var(--text-base);
-      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
   .sm\:text-lg {
@@ -921,24 +916,19 @@
       font-size: 1rem;
     }
   }
+  .sm\:text-\[2\.2rem\] {
+    @media (width >= 40rem) {
+      font-size: 2.2rem;
+    }
+  }
+  .sm\:text-\[2\.4rem\] {
+    @media (width >= 40rem) {
+      font-size: 2.4rem;
+    }
+  }
   .sm\:text-\[2\.6rem\] {
     @media (width >= 40rem) {
       font-size: 2.6rem;
-    }
-  }
-  .sm\:text-\[2\.8rem\] {
-    @media (width >= 40rem) {
-      font-size: 2.8rem;
-    }
-  }
-  .sm\:text-\[2rem\] {
-    @media (width >= 40rem) {
-      font-size: 2rem;
-    }
-  }
-  .sm\:text-\[3\.2rem\] {
-    @media (width >= 40rem) {
-      font-size: 3.2rem;
     }
   }
   .md\:mt-4 {
@@ -1029,6 +1019,16 @@
       font-size: 1.7rem;
     }
   }
+  .md\:text-\[1\.8rem\] {
+    @media (width >= 48rem) {
+      font-size: 1.8rem;
+    }
+  }
+  .md\:text-\[2\.8rem\] {
+    @media (width >= 48rem) {
+      font-size: 2.8rem;
+    }
+  }
   .md\:text-\[2rem\] {
     @media (width >= 48rem) {
       font-size: 2rem;
@@ -1037,11 +1037,6 @@
   .md\:text-\[3\.2rem\] {
     @media (width >= 48rem) {
       font-size: 3.2rem;
-    }
-  }
-  .md\:text-\[3\.6rem\] {
-    @media (width >= 48rem) {
-      font-size: 3.6rem;
     }
   }
   .md\:text-\[3rem\] {
@@ -1171,11 +1166,6 @@
       font-size: 1.6rem;
     }
   }
-  .xl\:text-\[1\.7rem\] {
-    @media (width >= 80rem) {
-      font-size: 1.7rem;
-    }
-  }
   .xl\:text-\[1\.8rem\] {
     @media (width >= 80rem) {
       font-size: 1.8rem;
@@ -1191,6 +1181,11 @@
       font-size: 2rem;
     }
   }
+  .xl\:text-\[3\.4rem\] {
+    @media (width >= 80rem) {
+      font-size: 3.4rem;
+    }
+  }
   .xl\:text-\[3\.6rem\] {
     @media (width >= 80rem) {
       font-size: 3.6rem;
@@ -1201,17 +1196,16 @@
       font-size: 3.8rem;
     }
   }
-  .xl\:text-\[4\.2rem\] {
-    @media (width >= 80rem) {
-      font-size: 4.2rem;
-    }
-  }
 }
 html {
   background-color: #20203a;
   font-size: 62.5%;
   font-family: var(--font-jost);
   color: white;
+}
+.active {
+  font-weight: 600;
+  border-bottom: 2px solid #ff9800;
 }
 @layer components {
   .card {
@@ -1225,22 +1219,29 @@ html {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     text-decoration-line: underline;
+    text-underline-offset: 2px;
     @media (width >= 40rem) {
       font-size: 1.4rem;
+    }
+    @media (width >= 48rem) {
+      font-size: 1.6rem;
     }
     @media (width >= 80rem) {
       font-size: 1.8rem;
     }
   }
   .card-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
     --tw-font-weight: var(--font-weight-extralight);
     font-weight: var(--font-weight-extralight);
     @media (width >= 40rem) {
       font-size: 1.4rem;
     }
-    @media (width >= 80rem) {
+    @media (width >= 48rem) {
       font-size: 1.6rem;
+    }
+    @media (width >= 80rem) {
+      font-size: 1.8rem;
     }
   }
   .btn-resume {
@@ -1276,13 +1277,6 @@ html {
       line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
-  .active {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 2px;
-    border-color: var(--color-logocolor);
-    --tw-font-weight: var(--font-weight-semibold);
-    font-weight: var(--font-weight-semibold);
-  }
 }
 @property --tw-translate-x {
   syntax: "*";
@@ -1305,10 +1299,6 @@ html {
   initial-value: solid;
 }
 @property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-leading {
   syntax: "*";
   inherits: false;
 }
@@ -1439,7 +1429,6 @@ html {
       --tw-translate-z: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-leading: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
